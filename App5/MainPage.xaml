@@ -1,0 +1,58 @@
+﻿<Page
+    x:Class="App5.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:App5"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid >
+        <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center" Background="{ThemeResource AppBarBackground}" Margin="831,237,798,221" Width="291" Height="622">
+
+        <Border Background="Purple"  >
+            <TextBlock x:Name="Textblock1" Text="Hello!" FontSize="100"></TextBlock>
+        </Border >
+        <Ellipse Width="200" Height="200" Margin="10,10,10,10">
+            <Ellipse.Fill>
+                <ImageBrush ImageSource="assets\159406-12051615025622.jpg"/>
+            </Ellipse.Fill>
+        </Ellipse>
+        <TextBox x:Name="TB1" Width="200" PlaceholderText="请输入你的用户名" FontSize="10"/>
+        <TextBlock Height="20"/>
+
+        <PasswordBox x:Name="passwordBox" Width="200" MaxLength="16" 
+                         PasswordChanged="passwordBox_PasswordChanged" PlaceholderText="请输入你的密码"/>
+        <TextBlock x:Name="statusText" Margin="10" HorizontalAlignment="Center"  />
+        <Button x:Name="tb2"  Content="登录" Click="bt2_Click" HorizontalAlignment="Left" />
+        <Button x:Name="btnWhat" Content="注册？" HorizontalAlignment="Center" VerticalAlignment="Center" >
+            <Button.Flyout>
+                <Flyout>
+                    <StackPanel>
+                        <TextBlock Width="430" Style="{StaticResource BaseTextBlockStyle}"
+                                   Text="噢！你才来注册？滚吧！" Foreground="Blue"  FontSize="25"/>
+                        <Button Click="btnUndo_Click" Margin="12" Content="好的，我滚"/>
+                    </StackPanel>
+                </Flyout>
+            </Button.Flyout>
+        </Button>
+        <Button x:Name="btnWhat1" Content="忘记密码？" HorizontalAlignment="Right" VerticalAlignment="Center"   >
+            <Button.Flyout>
+                <Flyout>
+                    <StackPanel>
+                        <TextBlock Width="430" Style="{StaticResource BaseTextBlockStyle}"
+                                   Text="噢！你忘了密码，走吧！" Foreground="Blue"  FontSize="25"/>
+                        <Button Click="btnUndo_Click" Margin="12" Content="好的，我走"/>
+                    </StackPanel>
+                </Flyout>
+            </Button.Flyout>
+        </Button>
+        <HyperlinkButton Content="不会点这里" NavigateUri="http://www.baidu.com" />
+
+
+
+
+    </StackPanel >
+        </Grid >
+
+</Page>
